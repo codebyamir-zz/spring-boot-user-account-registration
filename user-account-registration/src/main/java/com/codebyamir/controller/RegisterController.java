@@ -26,14 +26,17 @@ import com.nulabinc.zxcvbn.Zxcvbn;
 @Controller
 public class RegisterController {
 	
-	@Autowired
 	private BCryptPasswordEncoder bCryptPasswordEncoder;
-	
-	@Autowired
 	private UserService userService;
+	private EmailService emailService;
 	
 	@Autowired
-	private EmailService emailService;
+	public RegisterController(BCryptPasswordEncoder bCryptPasswordEncoder,
+			UserService userService, EmailService emailService) {
+		this.bCryptPasswordEncoder = bCryptPasswordEncoder;
+		this.userService = userService;
+		this.emailService = emailService;
+	}
 	
 	// Return registration form template
 	@RequestMapping(value="/register", method = RequestMethod.GET)
