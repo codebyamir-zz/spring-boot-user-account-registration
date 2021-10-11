@@ -1,20 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,300,500,700");
 
-
 .loginscreen .btn-primary.disabled
 {
-  background-color: #188bc;
-  opacity: 0.4;
+  background-color:#188bc;
+  opacity:0.4;
 }
-
 .loginscreen .btn-primary.active
 {
   background-color: #188bc;
   opacity: 1;
-}
-
-
+} 
 h1,
 h2,
 h3,
